@@ -1,7 +1,7 @@
 class Solution:
     def pancakeSort(self, arr: List[int]) -> List[int]:
         k = []
-        while not all(arr[i] < arr[i+1] for i in range(len(arr)-1)):
+        while arr:
             cur = max(arr)
             if arr.index(cur) + 1 == cur:
                 arr = arr[:-1]
